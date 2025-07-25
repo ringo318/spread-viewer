@@ -7,7 +7,7 @@
       <ng-template ngFor let-col [ngForOf]="columns">
         <ng-template [ngIf]="col.visible">
           <gc-column
-            [dataField]="col.ColumID"
+            [dataField]="col.columnId"
             [width]="col.width"
             [headerText]="col.text">
           </gc-column>

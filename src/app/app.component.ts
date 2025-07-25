@@ -11,8 +11,8 @@ export class AppComponent {
 
   dataSource = [{ id: 1, name: '製品A' }];
   columns = [
-    { ColumID: 'id', text: 'ID', width: 100, visible: true },
-    { ColumID: 'name', text: '商品名', width: 200, visible: true }
+    { columnId: 'id', text: 'ID', width: 100, visible: true },
+    { columnId: 'name', text: '商品名', width: 200, visible: true }
   ];
 
   tabs = [
