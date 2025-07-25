@@ -1,0 +1,18 @@
+<div class="spread-content">
+  <gc-spread-sheets
+    [backColor]="spreadBackColor"
+    [hostStyle]="hostStyle"
+    (workbookInitialized)="initSpread($event)">
+    <gc-worksheet [name]="sheetName" [dataSource]="dataSource">
+      <ng-template ngFor let-col [ngForOf]="columns">
+        <ng-template [ngIf]="col.visible">
+          <gc-column
+            [dataField]="col.ColumID"
+            [width]="col.width"
+            [headerText]="col.text">
+          </gc-column>
+        </ng-template>
+      </ng-template>
+    </gc-worksheet>
+  </gc-spread-sheets>
+</div>

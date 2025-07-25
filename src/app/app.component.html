@@ -1,0 +1,16 @@
+<div style="margin: 20px;">
+  <h2>SpreadJS タブビュー</h2>
+  <button (click)="addTab()">タブ追加</button>
+
+  <div *ngFor="let tab of tabs; let i = index">
+    <h4>{{tab.sheetName}}</h4>
+    <app-spread-viewer
+      [dataSource]="tab.data"
+      [columns]="columns"
+      [sheetName]="tab.sheetName"
+      [hostStyle]="{ width: '100%', height: '400px' }"
+      [spreadBackColor]="'#f8f8f8'"
+      (workbookInitialized)="onSpreadInit($event, i)">
+    </app-spread-viewer>
+  </div>
+</div>
